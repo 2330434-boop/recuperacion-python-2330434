@@ -31,3 +31,24 @@ Sistema en consola desarrollado en Python para la administración de empleados, 
 ## Sincronización e Instalación
 ```bash
 uv sync
+
+Ejecución del Programa
+Bash
+uv run python -m recuperacion_python_2330434.main
+
+Pruebas Automatizadas
+Bash
+uv run pytest
+
+Revisión y Formato con Ruff
+Bash
+uv run ruff check .
+uv run ruff format --check .
+
+Decisiones de Diseño
+Se implementó una arquitectura modular dividiendo la representación de datos (models.py), la lógica operativa (services.py) y la interfaz en consola (main.py) para mantener una clara separación de responsabilidades.
+
+Problemas Encontrados
+Problema: Mover el archivo pyproject.toml y la carpeta de pruebas a la raíz para que uv y pytest reconozcan la estructura correctamente.
+
+Solución: Se reorganizaron los módulos asegurando que los paquetes queden alojados en src/ y tests/.
